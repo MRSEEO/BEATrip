@@ -1,6 +1,7 @@
 # ⚡ BEATrip
 
-> **Cinematic 2D Rhythm-Action Hybrid (Dodge-Parry-Pulse) & In-Engine NLE Level Editor in Godot 4.**  
+> **Cinematic 2D Rhythm-Action Hybrid (Dodge-Parry-Pulse) & In-Engine NLE Level Editor in Godot 4.**
+>
 > *"An interactive music video where the player is not a victim of bullets, but the conductor of the drop."*
 
 [![Engine](https://img.shields.io/badge/Engine-Godot%204.7.2-478cbf?logo=godotengine&logoColor=white)](https://godotengine.org)
@@ -11,127 +12,144 @@
 
 ---
 
-## 📥 Скачать и сообщества (Public Hub)
+## 📥 Download & Community (Public Hub)
 
-Добро пожаловать в официальный публичный репозиторий **BEATrip**! Здесь публикуются свежие сборки игры, чейнджлоги, документация и ведется сбор обратной связи от игроков и чартеров.
+Welcome to the official public repository for **BEATrip**! This hub serves as the central place for official game builds, changelogs, architectural overviews, and community feedback from players and charters.
 
-- **[📦 Скачать актуальный билд (Releases)](../../releases)** — готовые сборки под Windows.
-- **[🐛 Сообщить о баге / Предложить идею (Issues)](../../issues)** — трекер ошибок и фича-реквестов.
-- **[💬 Обсуждения и кастомные уровни (Discussions)](../../discussions)** — обмен чартами, вопросы по NLE-редактору и общение с комьюнити.
-
----
-
-## 🚀 Ключевые возможности проекта
-
-### 1. Боевая механика: От жертвы к хищнику
-- **Dodge + Rhythm Parry + Reversal**: уклонение в свободной 2D-плоскости и парирование неблокируемых атак строго в такт трека (<kbd>Space</kbd> / <kbd>LMB</kbd>).
-- **Кинематографичный фидбек**: Hitstop (80–120 мс), экранная инверсия цвета, кольцевая ударная волна (Shockwave Ring) и отскок снаряда наружу за экран.
-- **Риск и награда (Graze System)**: скользящие уклонения в миллиметрах от пуль заряжают щит и рывок.
-
-### 2. Встроенный NLE-редактор уровней (After Effects / Premiere style)
-- **Свободные дорожки и мульти-BPM**: произвольное размещение объектов, кусочно-постоянный расчет долей, динамическая сетка тактов.
-- **Многопоточный вейвформ**: декодирование PCM в фоне с дисковым бинарным кэшированием.
-- **Движок кейфрейминга**: секундомеры для всех свойств, саб-лейны ключей (`▼`), кривые интерполяции (`Ease In/Out`), DAW-хэндлы фейдов.
-- **Photoshop-Style Free Transform**: 8 маркеров ресайза во вьюпорте с односторонним якорным растяжением и вращением за углами.
-- **Нативная система Undo / Redo**: полная отмена (<kbd>Ctrl+Z</kbd>) и возврат (<kbd>Ctrl+Y</kbd>) любых действий редактора.
-- **Категоризированный инспектор**: мини-иконки параметров, точечный `⟲` и общий сброс к дефолтам `Reset [⟲]`.
-- **Загрузка ресурсов и ренейминг**: загрузка файлов с диска через системный `FileDialog`, инлайн-редактирование имен объектов на таймлайне.
-
-### 3. Производительность и векторный конвейер
-- **Zero Raster PNGs In-Game**: 100% процедурный вектор (`_draw()`) и нативные `.svg` через ThorVG для бесконечной резкости при любом зуме и разрешениях вплоть до 4K/21:9.
-- **Оптимизация $O(K)$ Active Window**: гибридный бинарный поиск активных событий в кадре (ускорение в $15.7\times$ раз по сравнению с линейным перебором).
-
-### 4. Архитектура пакетов уровней (Level Bundles) и библиотека
-- **Полная автономность уровней**: каждый уровень хранится в собственной изолированной папке (`res://levels/` и `user://levels/`) со своими `level.json`, манифестом `meta.json`, музыкой `audio.mp3` и обложкой $512 \times 512$ `preview.png`.
-- **Полноэкранная библиотека уровней**: карточки с обложками, фильтрами, живым поиском и кнопкой создания «+ Create New Level».
-- **Эргономичное сохранение**: быстрое сохранение по <kbd>Ctrl+S</kbd> сразу в папку уровня, боковой выплывающий Toast «Project Saved!», диалог выхода по <kbd>Esc</kbd>.
-- **Внутриигровая диагностическая консоль**: логгер и терминал по <kbd>~</kbd> / <kbd>F12</kbd> с поиском, фильтрами и экспортом дампа отчетов.
-
-### 5. Главное меню в эстетике швейцарского брутализма (Swiss Cyber-Brutalism)
-- **Контрастные кнопки с инверсией (`InvertButton`)**: плавный выезд белой плашки с мгновенной инверсией шрифта в Vantablack (`#020204`) и смещением на `+12px`.
-- **Интегрированный OST Jukebox**: выпадающий сверху аудиоплеер с динамическим чтением треков уровней, seek-баром, лупом и шаффлом.
-- **Боковая шторка настроек в стиле osu!lazer**: двухколоночный слайд-аут (`750px`), сайдбар 5 категорий с квадратной ховер-инверсией, непрерывный скролл-фид с отступом `24px` от скроллбара и LOD-блюр экрана.
-- **Аудио-реактивный 3-слойный параллакс**: кинетическая арена с глубокой сеткой, FFT-эквалайзером и псевдо-3D роем осколков.
-- **Типографический глитч логотипа**: контраст акцидентного Inter 900 и антиквы Playfair Display Italic с каскадным глитч-эффектом.
+* [**📦 Download Latest Build (Releases)**](../../releases) — Ready-to-play standalone builds for Windows.
+* [**🐛 Report a Bug / Request a Feature (Issues)**](../../issues) — Issue tracker for bug reports and feature suggestions.
+* [**💬 Community & Custom Levels (Discussions)**](../../discussions) — Share custom charts, ask NLE editor questions, and connect with the community.
 
 ---
 
-## ❓ FAQ (Часто задаваемые вопросы)
+## 🚀 Key Features
 
-### Какова философия игры и дизайна?
-Создать максимально тактильный, отзывчивый и приятный опыт на стыке ритм-игры и профессионального софта:
-- **Геймплей:** Плавность, читаемость и мгновенный отклик уровня *osu!*.
-- **Редактор (NLE):** Функциональность и скорость работы уровня *Sony Vegas*, *Adobe Premiere* и *FL Studio*. Строгий минималистичный интерфейс, но с огромной мощью под капотом для чартеров.
+### 1. Combat Mechanics: From Prey to Predator
 
-### Это клон JSAB (Just Shapes & Beats) или Project Arrhythmia (PA)?
-И да, и нет. Идея проекта зародилась ещё в 2017 году как концепт «идейного продолжения» игры *Beat da Beat*. Мы с *Project Arrhythmia* идем по похожему пути с фокусом на пользовательский контент, но у меня есть четкое видение активных механик (система парирования и контратаки), эстетики швейцарского кибер-брутализма и — главное — архитектуры и удобства NLE-редактора, которые фундаментально отличают **BEATrip** от PA. Это не клон, а собственная ветвь эволюции жанра.
+* **Dodge + Rhythm Parry + Reversal**: Free-form 2D spatial dodging combined with rhythm-synced parrying of unblockable attacks (<kbd>Space</kbd> / <kbd>LMB</kbd>).
+* **Cinematic Feedback**: Tactile Hitstop ($80\text{--}120\text{ ms}$), full-screen color inversion, expanding Shockwave Rings, and projectile deflection back off-screen.
+* **Risk & Reward (Graze System)**: Razor-thin near-misses recharge your shield and dash meter.
 
-### Почему векторная графика, а не пиксели или растровые спрайты?
-Изначально игра задумывалась как пиксельный шмап. Но в процессе разработки стало ясно: чистый вектор (через процедурную отрисовку и движок ThorVG) дает невероятную свободу:
-- Никаких артефактов и «мыла» при экстремальном зуме и вращении объектов на $360^\circ$.
-- Идеальная бритвенная четкость на мониторах 1440p, 4K и ультрашироких экранах 21:9.
-- Крошечный вес: файлы уровней весят килобайты, а не десятки мегабайт.
-- Полная поддержка загрузки кастомных векторных объектов в формате `.svg`.
+### 2. In-Engine NLE Level Editor (After Effects / Premiere Style)
 
-### Что насчёт режима истории (Story Mode)?
-Сюжетный режим — это то, с чего началась сама идея **BEATrip**. Но в процессе разработки я понял важную вещь: без мощного, отполированного редактора уровней создание сюжетных миссий превращается в путь к выгоранию соло-разработчика. Поэтому сначала доводится до идеала встроенный NLE-редактор, и затем прямо на его базе будет собрана сюжетная кампания из 5 актов.
+* **Freeform Tracks & Multi-BPM**: Unrestricted object placement, piecewise-constant beat calculation, and a dynamic measure grid.
+* **Multi-Threaded Waveform**: Background PCM audio decoding with binary disk caching.
+* **Keyframing Engine**: Property stopwatches, dedicated keyframe sub-lanes (`▼`), interpolation curves (`Ease In/Out`), and DAW-style fade handles.
+* **Photoshop-Style Free Transform**: 8 viewport resize handles featuring one-sided anchored stretching and corner rotation.
+* **Native Undo / Redo**: Comprehensive state history (<kbd>Ctrl+Z</kbd> / <kbd>Ctrl+Y</kbd>) across all editor operations.
+* **Categorized Inspector**: Parameter mini-icons, individual property resets (`⟲`), and global `Reset [⟲]` to defaults.
+* **Asset Loading & Inline Renaming**: Native OS `FileDialog` integration and direct inline renaming of timeline objects.
 
-### Будет ли игра в Steam?
-Вероятно, да. Выход в Steam — это серьезный шаг, требующий временных затрат и юридической подготовки. Я не хочу выпускать игру в «сыром» раннем доступе, пока редактор и базовый геймплей не достигнут идеального состояния. Но как цель — это отличный ориентир.
+### 3. Performance & Vector Pipeline
 
-### Зачем проект на GitHub, если исходный код закрыт?
-GitHub — идеальная техническая площадка для дистрибуции и прозрачной обратной связи. Здесь невероятно удобно принимать баг-репорты через **Issues** (с логами из встроенной консоли игры), вести обсуждения в **Discussions** и публиковать готовые сборки через **Releases**.
+* **Zero Raster PNGs In-Game**: 100% procedural vector rendering (`_draw()`) and native `.svg` support powered by ThorVG, delivering infinite sharpness at any zoom level up to 4K and 21:9 ultrawide.
+* **$O(K)$ Active Window Optimization**: Hybrid binary search for active frame events ($15.7\times$ speedup compared to linear iteration).
 
-Что касается закрытого кода: я хочу сохранить контроль над архитектурой и целостностью экосистемы проекта. Пока база игры и формат пакетов уровней активно формируются, открытый код неизбежно приведет к фрагментации — появлению десятка несовместимых форков, что размоет комьюнити чартеров на самом старте. Мне важно, чтобы **BEATrip** развивался по единому авторскому видению.  
-**Однако:** если я когда-нибудь прекращу разработку или не смогу её продолжать, я с радостью открою исходный код для сообщества (End-of-Life Open Source).
+### 4. Level Bundle Architecture & Library
 
-### Создан ли проект с помощью ИИ? Почему он используется?
-Да, в разработке кода активно используется передовой пайплайн с ИИ-агентами (Multi-Agent Orchestration), и я не скрываю этого. При этом важно понимать две вещи:
-1. **Творчество — на 100% человеческое:** ИИ используется *исключительно* для программирования и инженерии. Вся музыка, саунд-дизайн, визуальный стиль, архитектура уровней и геймдизайн создаются вручную.
-2. **Инженерная дисциплина:** Это не «нейрослоп на коленке». Весь код проходит через строгий *Human-in-the-loop* контроль, архитектурное ревью и автоматизированное Headless-тестирование (сотни проверок в QA-сьютах).
+* **Self-Contained Level Packages**: Every level lives in an isolated directory (`res://levels/` and `user://levels/`) containing its own `level.json`, `meta.json` manifest, `audio.mp3`, and $512 \times 512$ `preview.png` cover art.
+* **Full-Screen Level Library**: Visual level cards with cover art, filtering, live search, and a "+ Create New Level" workflow.
+* **Ergonomic Saving**: Instant save (<kbd>Ctrl+S</kbd>) directly to the level bundle, slide-out "Project Saved!" toast notification, and an unsaved changes guard on <kbd>Esc</kbd>.
+* **In-Game Diagnostic Console**: Built-in logger and terminal (<kbd>~</kbd> / <kbd>F12</kbd>) featuring search, severity filters, and one-click crash/report dump export.
 
-Я в первую очередь музыкант и геймдизайнер. Свободного времени на хобби-разработку не так много, и без ИИ-ассистентов создание настолько сложного NLE-редактора и векторного движка в одиночку заняло бы долгие годы. Я выступаю как системный архитектор и тимлид: проектирую логику модулей, UX и дизайн-спецификации, делегируя рутинное написание кода быстрым ИИ-разработчикам.
+### 5. Swiss Cyber-Brutalism Main Menu
+
+* **Contrast Inversion Buttons (`InvertButton`)**: Smooth white fill sweep with instant typography color inversion to Vantablack (`#020204`) and a `+12px` kinetic shift.
+* **Integrated OST Jukebox**: Top-docked dropdown audio player dynamically indexing level tracks, complete with seek bar, loop, and shuffle controls.
+* **osu!lazer-Inspired Settings Drawer**: Two-column slide-out panel (`750px`), 5-category sidebar with square hover-inversion, continuous scroll feed with a `24px` scrollbar gutter, and real-time screen LOD blur.
+* **Audio-Reactive 3-Layer Parallax**: Kinetic background arena featuring a deep perspective grid, FFT spectrum equalizer, and a pseudo-3D shard swarm.
+* **Typographic Glitch Logo**: High-contrast pairing of heavy geometric *Inter 900* and sharp *Playfair Display Italic* serif with cascading glitch shaders.
 
 ---
 
-## 📖 Внутренняя документация и архитектура
+## ❓ FAQ (Frequently Asked Questions)
 
-Разработка проекта ведется по строгой системе спецификаций и автотестов (более 200+ автоматизированных Headless-проверок аудио-шин, UI-инвариантов, пакетов уровней и стресс-тестов системы Undo/Redo):
+### What is the core design philosophy of the game?
 
-- **`PROJECT.md`** — Главный паспорт проекта (Single Source of Truth), архитектурная карта кодовой базы и структура директорий.
-- **`TODO.md`** — Живой роадмап и трекер задач (выполненные фазы, активные задачи, бэклог).
-- **`GDD.md`** — Game Design Document (4 столпа, механика парирования, сюжетная кампания из 5 актов, саундтрек).
-- **`IDENTITY_AND_VISUAL_SPEC.md`** — Манифест визуального стиля, правило 90/7/3, палитра и кинематографический стек.
-- **`MENU_SPEC.md`** — Спецификация главного меню (Swiss Brutalism, InvertButton, OST Jukebox).
-- **`pipeline.md`** — Процесс разработки фич (Headless QA-тесты, скриншот-верификация, Dual Review).
+To craft a hyper-tactile, responsive, and uncompromising experience at the intersection of rhythm action and professional creative software:
+
+* **Gameplay:** The fluidity, visual clarity, and low-latency responsiveness of *osu!*.
+* **NLE Editor:** The workflow speed and timeline power of *Sony Vegas*, *Adobe Premiere*, and *FL Studio*. A clean, minimalist UI housing deep choreography tools under the hood.
+
+### Is this a clone of JSAB (Just Shapes & Beats) or Project Arrhythmia (PA)?
+
+Yes and no. The concept for **BEATrip** originated back in 2017 as a spiritual successor to *Beat da Beat*. While we share a community-driven DNA with *Project Arrhythmia*, **BEATrip** follows a distinct vision centered around active combat mechanics (rhythm parrying and counter-attacks), Swiss Cyber-Brutalist aesthetics, and—above all—a professional NLE editor architecture. It is not a clone, but a distinct evolution of the genre.
+
+### Why vector graphics instead of pixel art or raster sprites?
+
+The project initially started as a pixel-art shmup, but during development it became clear that pure vector rendering (via procedural drawing and ThorVG) unlocks unmatched creative freedom:
+
+* Zero pixelation or blurriness during extreme camera zooms and $360^\circ$ rotations.
+* Razor-sharp clarity on 1440p, 4K, and 21:9 ultrawide monitors.
+* Tiny footprint: custom levels weigh kilobytes rather than десятки megabytes.
+* Native support for importing custom `.svg` vector shapes.
+
+### What about Story Mode?
+
+Story Mode is the original spark that started **BEATrip**. However, building a complex campaign without first having a rock-solid level editor is a guaranteed path to solo-dev burnout. Therefore, the top priority is perfecting the in-engine NLE editor first, which will then serve as the foundation for building the 5-act Story Mode campaign.
+
+### Will the game release on Steam?
+
+Likely, yes. Launching on Steam is a major milestone that requires legal preparation and financial investment. I don't want to rush into Early Access until the core gameplay and NLE editor reach an uncompromising standard of polish, but a Steam release remains a primary long-term goal.
+
+### Why is the project on GitHub if the source code is closed?
+
+GitHub is the best platform for build distribution and structured community feedback. It provides a seamless workflow for tracking bug reports via **Issues** (paired with dumps from our built-in diagnostic console), hosting community conversations in **Discussions**, and delivering standalone builds via **Releases**.
+
+Regarding the closed source code: I want to maintain architectural integrity and protect the project's ecosystem. While the core engine and level bundle format are actively evolving, open-sourcing the code prematurely would lead to instant fragmentation—spawning incompatible forks and splitting the charter community before it even matures.
+
+**However (End-of-Life Open Source Pledge):** If I ever permanently cease development or am no longer able to maintain the project, I will gladly release the full source code to the community.
+
+### Was this project built with AI? Why use it?
+
+Yes, our code engineering pipeline actively leverages Multi-Agent AI Orchestration, and I am completely transparent about it. Two core principles govern how AI is used in **BEATrip**:
+
+1. **100% Human Creativity:** AI is used *exclusively* for software engineering and code generation. All music, sound design, visual direction, level choreography, and game design are crafted by hand.
+2. **Strict Engineering Discipline:** This is not "vibe-coded AI slop." Every module goes through strict *Human-in-the-loop* supervision, architectural review, and automated headless QA testing (200+ automated assertions across our test suites).
+
+First and foremost, I am a musician and game designer. With limited free time for hobbyist development, building a custom vector engine and a full-featured NLE editor solo would take many years without AI assistance. I act as the Systems Architect and Team Lead—designing module specs, UX workflows, and technical invariants—while delegating routine code implementation to fast AI agents.
+
+---
+
+## 📖 Internal Architecture & QA Pipeline
+
+**BEATrip** is engineered around a strict specification-driven workflow backed by over 200+ automated headless QA checks verifying audio buses, UI invariants, level bundling, and Undo/Redo state integrity:
+
+* **`PROJECT.md`** — Single Source of Truth, codebase architectural map, and directory structure.
+* **`TODO.md`** — Live roadmap and task tracker (completed phases, active sprints, icebox backlog).
+* **`GDD.md`** — Game Design Document (4 core pillars, parry mechanics, 5-act story outline, soundtrack).
+* **`IDENTITY_AND_VISUAL_SPEC.md`** — Visual style manifesto, the 90/7/3 color rule, and cinematic rendering stack.
+* **`MENU_SPEC.md`** — Main menu specification (Swiss Brutalism, `InvertButton`, OST Jukebox).
+* **`pipeline.md`** — Feature development lifecycle (Headless QA suites, screenshot verification, Dual Review).
 
 <details>
-<summary><b>🛠️ Справка для разработчика: команды запуска Headless QA-тестов (Dev-ветка)</b></summary>
+<summary><b>🛠️ Automated Headless QA Suite Commands (Dev Environment)</b></summary>
 
 <br>
 
-Тест аудио-шин, динамического питча и Jukebox (49 проверок):
-```powershell
+Audio buses, dynamic pitch, and Jukebox verification (49 checks):
+```bash
 godot --headless -s res://tests/qa_audio_and_jukebox_test.gd
 ```
 
-Тест спецификации главного меню (85 проверок):
-```powershell
+Main menu specification invariants (85 checks):
+```bash
 godot --headless -s res://tests/qa_main_menu_spec_test.gd
 ```
 
-Тест пакетов уровней Level Bundle (49 проверок):
-```powershell
+Level Bundle packaging & manifest integrity (49 checks):
+```bash
 godot --headless -s res://tests/qa_level_bundle_test.gd
 ```
 
-Комплексный запуск автономного QA-сьюта (Stress Test):
-```powershell
+Comprehensive Editor Stress Test suite:
+```bash
 godot --headless -s res://tests/qa_editor_stress.gd
 ```
 
-Тест надежности Undo / Redo:
-```powershell
+Undo / Redo state history reliability test:
+```bash
 godot --headless -s res://tests/qa_undoredo_test.gd
 ```
+
 </details>
